@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->year('tahun');
             $table->string('kategori', 50);
             $table->integer('stok');
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }
