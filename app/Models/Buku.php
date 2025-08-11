@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Buku extends Model
 {
     protected $table = 'buku';
-    protected $fillable = ['judul', 'penulis', 'tahun', 'kategori', 'stok'];
+    protected $fillable = ['judul', 'penulis', 'tahun', 'kategori', 'stok', 'deskripsi'];
 
     public function peminjaman()
     {

@@ -20,6 +20,7 @@ class BukuController extends Controller
             'tahun' => 'required|digits:4|integer',
             'kategori' => 'required|string|max:50',
             'stok' => 'required|integer|min:0',
+            'deskripsi' => 'nullable|string',
         ]);
 
         Buku::create($validated);
@@ -41,6 +42,7 @@ class BukuController extends Controller
             'tahun' => 'digits:4|integer',
             'kategori' => 'string|max:50',
             'stok' => 'integer|min:0',
+            'deskripsi' => 'nullable|string', // tambahkan ini
         ]);
 
         $buku->update($validated);
