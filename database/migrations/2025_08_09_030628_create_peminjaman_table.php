@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->date('tgl_dikembalikan')->nullable();
             $table->enum('status', ['dipinjam', 'dikembalikan']);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

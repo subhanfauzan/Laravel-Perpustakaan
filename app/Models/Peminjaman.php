@@ -3,9 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Peminjaman extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'peminjaman';
     protected $fillable = ['user_id', 'book_id', 'tgl_pinjam', 'tgl_kembali', 'tgl_dikembalikan', 'status'];
 
